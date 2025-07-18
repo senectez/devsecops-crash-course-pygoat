@@ -42,6 +42,8 @@ jobs:
 
    - name: Set up Docker CLI
      uses: docker/setup-docker@v2
+     with:
+        version: 25.0.3
 
    - name: Build Docker Image
      run: docker build -f Dockerfile -t myapp:latest .
