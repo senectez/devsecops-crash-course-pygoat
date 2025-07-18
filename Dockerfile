@@ -9,7 +9,7 @@ RUN sed -i 's|deb.debian.org/debian|archive.debian.org/debian|g' /etc/apt/source
     sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list && \
     sed -i '/deb.*buster-updates/d' /etc/apt/sources.list && \
     apt-get update && \
-    apt-get install --no-install-recommends -y dnsutils=1:9.11.5.P4+dfsg-5.1+deb10u9 libpq-dev=11.16-0+deb10u1 python3-dev=3.7.3-1 && \
+    apt-get install --no-install-recommends -y dnsutils libpq-dev python3-dev && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Set environment variables
